@@ -1,0 +1,63 @@
+/* Espaçamento padrão */
+.testimonials {
+    padding: 100px 10%;
+    background-color: var(--bg-dark);
+}
+
+/* 1. CABEÇALHO CENTRALIZADO */
+.center-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza os itens no meio da tela */
+    text-align: center;
+    margin-bottom: 70px;
+}
+
+/* 2. GRADE DE CARDS */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* Um espaço generoso entre os depoimentos */
+}
+
+/* 3. O CARD DE DEPOIMENTO */
+.testimonial-card {
+    display: flex;
+    flex-direction: column; /* Permite usar o truque do margin-top: auto depois */
+}
+
+.stars {
+    color: var(--yellow);
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.quote {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    font-style: italic; /* Deixa a letra deitadinha como no seu design */
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+/* 4. INFORMAÇÕES DO CLIENTE (O truque da borda) */
+.author-info {
+    border-top: 1px solid #333; /* A linha fina separadora */
+    padding-top: 20px; /* Espaço entre a linha e o nome */
+    
+    /* A MÁGICA: Isso empurra a caixa de informações do autor lá para o fundo. 
+       Assim, as linhas de todos os cards ficam na mesma altura! */
+    margin-top: auto; 
+}
+
+.author-info h4 {
+    font-size: 1rem;
+    color: var(--text-light);
+    margin-bottom: 5px;
+}
+
+.author-info span {
+    font-size: 0.8rem;
+    color: var(--yellow);
+}

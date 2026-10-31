@@ -1,0 +1,160 @@
+/* 1. ESTRUTURA GERAL DA SEÇÃO */
+.contact {
+    padding: 100px 10%;
+    background-color: var(--bg-dark);
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 80px; /* Um espaço grande entre as duas colunas */
+}
+
+/* Define que cada coluna ocupa 50% do espaço */
+.contact-info, .contact-form {
+    flex: 1; 
+}
+
+/* 2. COLUNA DA ESQUERDA (Textos e Botão) */
+.contact-info h2 {
+    font-size: 3.5rem;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: #bbb;
+    line-height: 1.6;
+    margin-bottom: 40px;
+    max-width: 90%;
+}
+
+.btn-whatsapp {
+    display: inline-block;
+    background-color: #34d399; /* Um verde chamativo parecido com o do seu design */
+    color: #121212;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    margin-bottom: 60px;
+    transition: transform 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+}
+
+/* A grade com os 4 dados de contato */
+.info-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 colunas */
+    gap: 30px;
+    border-top: 1px solid #333;
+    padding-top: 40px;
+}
+
+.info-label {
+    color: var(--yellow);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.info-grid p {
+    color: var(--text-light);
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+/* 3. COLUNA DA DIREITA (O Formulário) */
+.input-group {
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    color: var(--yellow);
+    font-size: 10px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+/* O estilo minimalista das caixas de texto */
+.input-group input, 
+.input-group select, 
+.input-group textarea {
+    background: transparent; /* Fundo invisível */
+    border: none; /* Tira as bordas padrão */
+    border-bottom: 1px solid #444; /* Coloca só a linha de baixo */
+    color: var(--text-light);
+    font-size: 1rem;
+    padding: 10px 0;
+    font-family: inherit; /* Usa a mesma fonte do site */
+    outline: none; /* Tira aquela borda azul feia de quando clicamos no campo */
+    transition: border-color 0.3s ease;
+}
+
+/* Muda a cor da linha quando o usuário clica no campo */
+.input-group input:focus, 
+.input-group select:focus, 
+.input-group textarea:focus {
+    border-bottom-color: var(--yellow);
+}
+
+/* Cor do texto do placeholder (aquele textinho de dica dentro da caixa) */
+.input-group input::placeholder, 
+.input-group textarea::placeholder {
+    color: #555;
+}
+
+.btn-submit {
+    background-color: var(--yellow);
+    color: #121212;
+    border: none;
+    padding: 15px 40px;
+    font-weight: bold;
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 100%; /* Botão ocupando a largura toda do formulário */
+}
+
+.btn-submit:hover {
+    transform: translateY(-3px);
+}
+
+/* 4. O RODAPÉ (FOOTER) */
+.footer {
+    background-color: #080808; /* Um preto ainda mais escuro que o fundo do site */
+    padding: 30px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #1a1a1a;
+}
+
+.footer-logo {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.footer-copy p {
+    color: #666;
+    font-size: 0.8rem;
+}
+
+.footer-social a {
+    color: #888;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: var(--text-light);
+}

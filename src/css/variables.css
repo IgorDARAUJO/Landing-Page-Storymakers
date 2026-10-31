@@ -1,0 +1,23 @@
+/* 1. RESET BÁSICO (Tira margens padrão do navegador) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Depois trocaremos pela fonte oficial do seu design */
+}
+
+/* 2. VARIÁVEIS DE CORES (Facilita mudar depois) */
+:root {
+    --bg-dark: #121212;
+    --yellow: #F1E369; 
+    --text-light: #F5F5F5;
+}
+
+body {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+}
+
+/* Utilitários de texto que usamos em várias partes */
+.text-yellow { color: var(--yellow); }
+.italic { font-style: italic; }

@@ -1,0 +1,51 @@
+/* 1. O FUNDO DA SEÇÃO */
+.stats {
+    /* O linear-gradient escurece a imagem de fundo para dar contraste com os números amarelos */
+    background-image: linear-gradient(rgba(15, 15, 15, 0.85), rgba(15, 15, 15, 0.85)), url('https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Efeito Parallax: a imagem fica parada enquanto você rola o site */
+    padding: 100px 10%;
+    
+    /* Centraliza o bloco de números na tela */
+    display: flex;
+    justify-content: center;
+}
+
+/* 2. O BLOCO DAS 4 CAIXAS */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas de tamanhos iguais */
+    width: 100%;
+    max-width: 1100px;
+    background-color: #161616; /* Fundo escuro sólido para as caixas */
+}
+
+/* 3. CADA CAIXA INDIVIDUAL */
+.stat-box {
+    padding: 60px 20px;
+    text-align: center;
+    border-right: 1px solid #2a2a2a; /* Linha sutil separando as caixas */
+}
+
+/* Tira a linha da última caixa para o visual ficar perfeito */
+.stat-box:last-child {
+    border-right: none;
+}
+
+/* 4. A ESTÉTICA DOS TEXTOS */
+.stat-box h3 {
+    color: var(--yellow);
+    font-size: 3.5rem;
+    font-weight: normal;
+    margin-bottom: 10px;
+    /* Uma fonte serifada (com aqueles "pézinhos" nas letras) dá o tom de sofisticação do seu design */
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+.stat-box p {
+    color: #888;
+    font-size: 11px;
+    letter-spacing: 2px; /* Afasta as letras para ficar mais elegante */
+    text-transform: uppercase;
+}

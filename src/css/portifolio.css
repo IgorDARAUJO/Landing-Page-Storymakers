@@ -1,0 +1,68 @@
+/* Espaçamento geral da seção */
+.portfolio {
+    padding: 100px 10%;
+    background-color: var(--bg-dark);
+}
+
+/* 1. CABEÇALHO E FILTROS */
+.portfolio-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 50px;
+}
+
+.filters {
+    display: flex;
+    gap: 15px;
+}
+
+/* Estilo dos botões de filtro */
+.filter-btn {
+    background: transparent;
+    color: var(--text-light);
+    border: 1px solid #333;
+    padding: 8px 16px;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer; /* Muda a setinha do mouse para a mãozinha de clique */
+    transition: all 0.3s ease;
+}
+
+/* O botão que está selecionado no momento fica com borda amarela */
+.filter-btn.active, .filter-btn:hover {
+    border-color: var(--yellow);
+    color: var(--yellow);
+}
+
+/* 2. O GRID DO MOSAICO (Modo Cascata / Pinterest) */
+.portfolio-grid {
+    /* Em vez de 'display: grid', usamos o sistema de colunas */
+    column-count: 3; /* Cria 3 colunas perfeitas */
+    column-gap: 15px; /* Espaço entre as colunas */
+}
+
+/* 3. ESTILO DE CADA ITEM */
+.portfolio-item {
+    margin-bottom: 15px; /* Espaço abaixo de cada foto */
+    
+    /* ESSENCIAL: Evita que uma foto seja cortada no meio entre uma coluna e outra */
+    break-inside: avoid; 
+    
+    width: 100%;
+    overflow: hidden;
+    position: relative; /* Prepara o terreno caso você queira colocar texto em cima da foto depois */
+}
+
+/* 4. COMPORTAMENTO DA IMAGEM */
+.portfolio-item img {
+    width: 100%;
+    height: auto; /* Deixa a altura livre para a foto mostrar se é vertical ou horizontal */
+    display: block; /* Tira um espacinho em branco chato que o HTML coloca sob as imagens */
+    transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.05); /* Mantém aquele efeito legal de zoom */
+}
