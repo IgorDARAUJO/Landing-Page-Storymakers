@@ -46,7 +46,7 @@ cd Landing-Page-Storymakers
 
 Se preferir, use a extensão **Live Server** do VS Code para recarregar automaticamente.
 
-## Contato
+## Contato da agência
 
 - Instagram: [@agenciathas](https://www.instagram.com/agenciathas)
 - E-mail: agenciathas@gmail.com
@@ -55,3 +55,4 @@ Se preferir, use a extensão **Live Server** do VS Code para recarregar automati
 ## Autor
 
 © 2026 Igor Araújo. Todos os direitos reservados.
+
